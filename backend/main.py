@@ -4,7 +4,7 @@ from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 
 # Adjust the path to the dist folder of the frontend
-app = Flask(__name__, static_folder="../my-app/dist")
+app = Flask(__name__, static_folder="dist")
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
@@ -12,7 +12,7 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 @app.route('/')
 def serve_index():
     return send_from_directory(app.static_folder, 'index.html')
-
+  
 # Serve any other static files (JavaScript, CSS, etc.)
 @app.route('/<path:path>')
 def serve_static(path):
