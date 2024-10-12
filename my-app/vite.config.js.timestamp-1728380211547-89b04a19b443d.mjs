@@ -1,0 +1,15 @@
+// vite.config.js
+import { defineConfig } from "file:///D:/webrtc_python_react/my-app/node_modules/vite/dist/node/index.js";
+import react from "file:///D:/webrtc_python_react/my-app/node_modules/@vitejs/plugin-react/dist/index.mjs";
+import { nodePolyfills } from "file:///D:/webrtc_python_react/my-app/node_modules/vite-plugin-node-polyfills/dist/index.js";
+var vite_config_default = defineConfig({
+  plugins: [react(), nodePolyfills()],
+  define: {
+    global: {}
+    // Polyfill global
+  }
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcuanMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJEOlxcXFx3ZWJydGNfcHl0aG9uX3JlYWN0XFxcXG15LWFwcFwiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9maWxlbmFtZSA9IFwiRDpcXFxcd2VicnRjX3B5dGhvbl9yZWFjdFxcXFxteS1hcHBcXFxcdml0ZS5jb25maWcuanNcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfaW1wb3J0X21ldGFfdXJsID0gXCJmaWxlOi8vL0Q6L3dlYnJ0Y19weXRob25fcmVhY3QvbXktYXBwL3ZpdGUuY29uZmlnLmpzXCI7aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAndml0ZSdcbmltcG9ydCByZWFjdCBmcm9tICdAdml0ZWpzL3BsdWdpbi1yZWFjdCdcbmltcG9ydCB7IG5vZGVQb2x5ZmlsbHMgfSBmcm9tICd2aXRlLXBsdWdpbi1ub2RlLXBvbHlmaWxscydcblxuLy8gaHR0cHM6Ly92aXRlanMuZGV2L2NvbmZpZy9cbmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbmZpZyh7XG4gIHBsdWdpbnM6IFtyZWFjdCgpLCAgbm9kZVBvbHlmaWxscygpXSxcbiAgZGVmaW5lOiB7XG4gICAgZ2xvYmFsOiB7fSwgIC8vIFBvbHlmaWxsIGdsb2JhbFxuICB9LFxufSlcbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBK1EsU0FBUyxvQkFBb0I7QUFDNVMsT0FBTyxXQUFXO0FBQ2xCLFNBQVMscUJBQXFCO0FBRzlCLElBQU8sc0JBQVEsYUFBYTtBQUFBLEVBQzFCLFNBQVMsQ0FBQyxNQUFNLEdBQUksY0FBYyxDQUFDO0FBQUEsRUFDbkMsUUFBUTtBQUFBLElBQ04sUUFBUSxDQUFDO0FBQUE7QUFBQSxFQUNYO0FBQ0YsQ0FBQzsiLAogICJuYW1lcyI6IFtdCn0K
