@@ -4,19 +4,20 @@ from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 
 # Adjust the path to the dist folder of the frontend
-app = Flask(__name__, static_folder="dist")
+# app = Flask(__name__, static_folder="dist")
+app = Flask(__name__)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
-# Serve static files from the "dist" folder of your Vite frontend
-@app.route('/')
-def serve_index():
-    return send_from_directory(app.static_folder, 'index.html')
+# # Serve static files from the "dist" folder of your Vite frontend
+# @app.route('/')
+# def serve_index():
+#     return send_from_directory(app.static_folder, 'index.html')
   
-# Serve any other static files (JavaScript, CSS, etc.)
-@app.route('/<path:path>')
-def serve_static(path):
-    return send_from_directory(app.static_folder, path)
+# # Serve any other static files (JavaScript, CSS, etc.)
+# @app.route('/<path:path>')
+# def serve_static(path):
+#     return send_from_directory(app.static_folder, path)
 
 # Socket.io logic
 @socketio.on('connect')
