@@ -43,4 +43,5 @@ def handle_answer_call(data):
 # Start the server
 if __name__ == "__main__":
     PORT = int(os.environ.get("PORT", 5000))
+    print(f"Server is running on port {PORT}")
     socketio.run(app, port=PORT)
