@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { Grid, Typography, Paper, makeStyles } from '@material-ui/core';
 
-import { SocketContext } from '../SocketContext';
+import { Context } from '../ContextAzure';
 
 const useStyles = makeStyles((theme) => ({
   video: {
-    width: '550px',
+    width: '450px',
     [theme.breakpoints.down('xs')]: {
       width: '300px',
     },
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const VideoPlayer = () => {
-  const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(SocketContext);
+  const { name, callAccepted, myVideo, userVideo, callEnded, stream, call } = useContext(Context);
   const classes = useStyles();
 
   return (

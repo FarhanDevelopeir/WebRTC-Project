@@ -1,8 +1,9 @@
 import {AppBar, Typography} from '@material-ui/core'
 import VideoPlayer from './Components/VideoPlayer'
-import Options from './Components/Sidebar'
+import Sidebar from './Components/Sidebar'
 import Notifications from './Components/Notifications'
 import { makeStyles } from '@material-ui/core/styles';
+import MeetingTranscript from './Components/MeetingTranscript';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,13 +38,14 @@ function App() {
 
   return (
     <div className={classes.wrapper}>
-     <AppBar position='static' color='inherit' className={classes.appBar} >
+     {/* <AppBar position='static' color='inherit' className={classes.appBar} >
       <Typography variant='h2' align='center'>Video Player</Typography>
-     </AppBar>
+     </AppBar> */}
      <VideoPlayer/>
-      <Options>
+      <Sidebar>
         <Notifications/>
-      </Options>
+      </Sidebar>
+     {/* <MeetingTranscript/> */}
     </div>
   )
 }

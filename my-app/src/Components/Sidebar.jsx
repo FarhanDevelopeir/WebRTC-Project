@@ -4,7 +4,9 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
 
-import { SocketContext } from '../SocketContext';
+// import { SocketContext } from '../SocketContext';
+import { Context } from '../ContextAzure';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,17 +21,17 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     width: '600px',
-    margin: '35px 0',
+    margin: '10px 0',
     padding: 0,
     [theme.breakpoints.down('xs')]: {
       width: '80%',
     },
   },
   margin: {
-    marginTop: 20,
+    marginTop: 10,
   },
   padding: {
-    padding: 20,
+    padding: 10,
   },
   paper: {
     padding: '10px 20px',
@@ -38,9 +40,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Sidebar = ({ children }) => {
-  const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
+  const { me, callAccepted, name, setName, callEnded, leaveCall, callUser, transcript } = useContext(Context);
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
+
+  console.log(me);
+  
 
   return (
     <Container className={classes.container}>
@@ -72,6 +77,7 @@ const Sidebar = ({ children }) => {
           </Grid>
         </form>
         {children}
+        {transcript}
       </Paper>
     </Container>
   );

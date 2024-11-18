@@ -9,4 +9,7 @@ export default defineConfig({
   define: {
     // global: {}, // Polyfill global
   },
+  build: {
+    target: 'esnext', // Targets modern browsers that support async/await
+  },
 });
